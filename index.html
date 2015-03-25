@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="calculatorApp">
+  <head>
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  </head>
+  <body>
+	<div ng-controller='OperandsController'>
+		<p>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(1)'>1</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(2)'>2</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(3)'>3</button>
+			<button type="button" class="btn btn-primary" value='+' ng-click='operationClick($event)'>+</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(4)'>4</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(5)'>5</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(6)'>6</button>
+			<button type="button" class="btn btn-primary" value='-' ng-click='operationClick($event)'>-</button>
+		</p>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(7)'>7</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(8)'>8</button>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(9)'>9</button>
+			<button type="button" class="btn btn-primary" value='*' ng-click='operationClick($event)'>*</button>
+		</p>
+		<p>
+			<button type="button" class="btn btn-primary" ng-click='operandClick(0)'>0</button>
+			<button type="button" class="btn btn-primary" value='=' ng-click='operationClick($event)'>=</button>
+			<button type="button" class="btn btn-primary">_</button>
+			<button type="button" class="btn btn-primary" value='/' ng-click='operationClick($event)'>/</button>
+		</p>
+		<p>{{result}}</p>
+	</div>
+  </body>
+</html>
